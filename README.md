@@ -4,7 +4,7 @@ An Artificial Intelligence assignment that analyzes a real-world Fraud Detection
 
 ---
 
-## 📚 Course Information
+##  Course Information
 
 | Field | Details |
 |---------|---------|
@@ -17,7 +17,7 @@ An Artificial Intelligence assignment that analyzes a real-world Fraud Detection
 
 ---
 
-## 📖 Introduction
+##  Introduction
 
 Fraud Detection Systems are intelligent agents used by banks, payment processors, and financial institutions to identify suspicious transactions before financial losses occur.
 
@@ -33,7 +33,7 @@ This project analyzes the system using:
 
 ---
 
-# 🧠 PEAS Framework
+#  PEAS Framework
 
 ## Performance Measures
 
@@ -93,7 +93,7 @@ The system gathers information from various sources:
 
 ---
 
-# 🌍 Environment Classification
+#  Environment Classification
 
 | Dimension | Classification | Justification |
 |------------|---------------|---------------|
@@ -106,7 +106,7 @@ The system gathers information from various sources:
 
 ---
 
-# ⚙️ Critical Analysis
+#  Critical Analysis
 
 ## Most Challenging Property: Dynamic Environment
 
@@ -155,7 +155,7 @@ This demonstrates the balance required between:
 
 ---
 
-# 📄 Structured JSON Representation
+#  Structured JSON Representation
 
 ```json
 {
@@ -189,13 +189,49 @@ This demonstrates the balance required between:
       "Transaction History Database: analyzes customer spending behavior from previous transactions",
       "External Threat Intelligence Feed: receives real-time updates about emerging fraud patterns and malicious entities"
     ]
-  }
+  },
+
+  "environment_classification": {
+
+    "fully_observable_vs_partially_observable": {
+      "choice": "Partially Observable",
+      "justification": "The system can observe transaction information but cannot directly determine customer intent or whether credentials have been stolen."
+    },
+
+    "single_agent_vs_multi_agent": {
+      "choice": "Multi-Agent",
+      "justification": "Customers, banks, payment processors, and fraudsters all interact simultaneously within the environment."
+    },
+
+    "deterministic_vs_stochastic": {
+      "choice": "Stochastic",
+      "justification": "Two transactions with similar characteristics may produce different outcomes because of hidden factors unavailable to the system."
+    },
+
+    "episodic_vs_sequential": {
+      "choice": "Sequential",
+      "justification": "Each fraud decision updates customer risk profiles and influences future transaction assessments."
+    },
+
+    "static_vs_dynamic": {
+      "choice": "Dynamic",
+      "justification": "Fraud techniques continuously evolve, requiring the system to adapt to changing attack strategies."
+    },
+
+    "discrete_vs_continuous": {
+      "choice": "Continuous",
+      "justification": "Risk scores, transaction amounts, and behavioral indicators exist on continuous numerical scales."
+    }
+  },
+
+  "utility_function": "U = alpha * Detection_Rate - beta * False_Positive_Rate - gamma * Latency_Penalty"
 }
+
 ```
 
 ---
 
-# 🏗 Technologies & Concepts
+#  Technologies & Concepts
 
 - Artificial Intelligence
 - Intelligent Agents
@@ -209,7 +245,7 @@ This demonstrates the balance required between:
 
 ---
 
-# 📚 References
+#  References
 
 1. Russell, S., & Norvig, P. (2022). *Artificial Intelligence: A Modern Approach* (4th Edition). Pearson.
 
